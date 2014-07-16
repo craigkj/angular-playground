@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Example Page</title>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+</head>
+<body>
+    <div class="container" ng-app="myApp">
+        <div ng-controller="myController">
+            <h1 class="{{data.class}}">Hello {{data.message}}</h1>
+            <h2>Reversed: <span>{{reverser(data.message)}}</span></h2>
+            <label>
+                <span>Name: </span>
+                <input type="text" ng-model="data.message"/>
+            </label>
+            <label>
+                <span>Class: </span>
+                <input type="text" ng-model="data.class"/>
+            </label>
+
+        <h2>Heroes</h2>
+            <input type="text" ng-model="search.name" />
+            <ul ng-repeat="hero in data.heroes | filter:search">
+                <li>{{hero.name}} - {{hero.alias}}</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+

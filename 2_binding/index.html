@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Example Page</title>
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link href="style.css" rel="stylesheet">
+
+
+    <!-- Bootstrap -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+
+</head>
+<body>
+<div class="container" ng-app="myApp">
+    <div ng-controller="myController">
+        <h1 class="{{data.class}}">Hello {{data.message}}</h1>
+
+        <label>
+            <span>Name: </span>
+            <input type="text" ng-model="data.message"/>
+        </label>
+        <label>
+            <span>Class: </span>
+            <input type="text" ng-model="data.class"/>
+        </label>
+    </div>
+</div>
+</body>
+</html>
+
